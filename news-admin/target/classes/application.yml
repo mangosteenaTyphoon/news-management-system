@@ -1,0 +1,30 @@
+server:
+  port: 8080
+
+spring:
+  application:
+    name: news-admin
+
+
+  mvc:
+    pathmatch:
+      matching-strategy: ant_path_matcher
+
+
+  profiles:
+    active: dev
+
+## mysql数据库连接
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://81.68.201.126:3306/news_dev?serverTimezone=GMT%2B8
+    username: qinyi
+    password: qinyiqwer
+  jackson:
+    date-format: yyyy-MM-dd HH:mm:ss
+    time-zone: GMT+8
+
+#mybatis日志处理
+mybatis-plus:
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl

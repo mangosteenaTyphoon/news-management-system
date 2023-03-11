@@ -1,0 +1,4 @@
+org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
+  com.news.core.config.MybatisPlusConfig,\
+  com.news.core.config.SwaggerConfig,\
+  com.news.core.handler.MyMetaObjectHandler

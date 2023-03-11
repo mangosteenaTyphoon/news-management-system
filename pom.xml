@@ -4,18 +4,47 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
+    <parent>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-parent</artifactId>
+        <version>2.2.1.RELEASE</version>
+        <relativePath/> <!-- lookup parent from repository -->
+    </parent>
+
+
     <groupId>com.qy</groupId>
     <artifactId>news-management-system</artifactId>
     <version>1.0-SNAPSHOT</version>
     <packaging>pom</packaging>
     <modules>
         <module>news-admin</module>
+        <module>news-security</module>
+        <module>news-common</module>
+        <module>news-common/news-common-banner</module>
     </modules>
 
     <properties>
-        <maven.compiler.source>8</maven.compiler.source>
-        <maven.compiler.target>8</maven.compiler.target>
-        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <druid.version>1.1.13</druid.version>
+        <mybatis-plus.version>3.0.5</mybatis-plus.version>
+        <mysql.version>8.0.19</mysql.version>
+        <hutool.version>5.7.13</hutool.version>
+        <sa-token.version>1.32.0</sa-token.version>
+        <velocity.version>2.0</velocity.version>
+        <lombok.version>1.18.22</lombok.version>
+        <swagger.version>3.0.0</swagger.version>
+        <commons-io.version>2.6</commons-io.version>
     </properties>
+
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+            </plugin>
+        </plugins>
+
+    </build>
+
 
 </project>

@@ -8,11 +8,17 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="news-admin" />
-        <module name="news-security" />
         <module name="news-common-core" />
         <module name="news-common-banner" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="news-common" target="1.8" />
+      <module name="news-common-banner" target="1.8" />
+      <module name="news-common-core" target="1.8" />
+      <module name="news-management-system" target="1.8" />
+      <module name="news-security" target="1.8" />
+    </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">

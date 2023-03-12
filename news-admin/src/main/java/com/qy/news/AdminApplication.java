@@ -9,7 +9,6 @@ import springfox.documentation.swagger2.annotations.EnableSwagger2;
 
 @MapperScan(basePackages = {"com.qy.news.mapper"})
 @SpringBootApplication
-//@EnableOpenApi
 public class AdminApplication {
     public static void main(String[] args) {
         SpringApplication.run(AdminApplication.class, args);

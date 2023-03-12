@@ -4,9 +4,10 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <parent>
-        <groupId>com.qy</groupId>
-        <artifactId>news-management-system</artifactId>
-        <version>1.0-SNAPSHOT</version>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-parent</artifactId>
+        <version>2.2.1.RELEASE</version>
+        <relativePath/> <!-- lookup parent from repository -->
     </parent>
 
     <artifactId>news-admin</artifactId>
@@ -15,12 +16,20 @@
         <maven.compiler.source>8</maven.compiler.source>
         <maven.compiler.target>8</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-
+        <druid.version>1.1.13</druid.version>
+        <mybatis-plus.version>3.0.5</mybatis-plus.version>
+        <mysql.version>8.0.19</mysql.version>
+        <hutool.version>5.7.13</hutool.version>
+        <sa-token.version>1.32.0</sa-token.version>
+        <velocity.version>2.0</velocity.version>
+        <lombok.version>1.18.22</lombok.version>
+        <swagger.version>3.0.0</swagger.version>
+        <commons-io.version>2.6</commons-io.version>
+        <slf4j.version>1.7.36</slf4j.version>
+        <sa-token.version>1.32.0</sa-token.version>
     </properties>
 
     <dependencies>
-
-
 
         <!--springboot web启动器-->
         <dependency>
@@ -28,19 +37,20 @@
             <artifactId>spring-boot-starter-web</artifactId>
         </dependency>
 
-
         <!--mybatis-plus-->
         <dependency>
             <groupId>com.baomidou</groupId>
             <artifactId>mybatis-plus-boot-starter</artifactId>
             <version>${mybatis-plus.version}</version>
         </dependency>
+
         <!-- velocity 模板引擎, Mybatis Plus 代码生成器需要 -->
         <dependency>
             <groupId>org.apache.velocity</groupId>
             <artifactId>velocity-engine-core</artifactId>
             <version>${velocity.version}</version>
         </dependency>
+
         <!--mysql-->
         <dependency>
             <groupId>mysql</groupId>
@@ -55,10 +65,26 @@
             <version>4.12</version>
         </dependency>
 
+
+        <!-- swagger集成 -->
         <dependency>
-            <groupId>com.qy</groupId>
-            <artifactId>news-common-core</artifactId>
-            <version>1.0-SNAPSHOT</version>
+            <groupId>io.springfox</groupId>
+            <artifactId>springfox-boot-starter</artifactId>
+            <version>${swagger.version}</version>
+        </dependency>
+
+
+        <!--commons-io-->
+        <dependency>
+            <groupId>commons-io</groupId>
+            <artifactId>commons-io</artifactId>
+            <version>${commons-io.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <version>${lombok.version}</version>
         </dependency>
 
         <dependency>
@@ -67,12 +93,27 @@
             <version>${hutool.version}</version>
         </dependency>
 
-        <!--commons-io-->
+        <!--        sa-token-->
         <dependency>
-            <groupId>commons-io</groupId>
-            <artifactId>commons-io</artifactId>
-            <version>${commons-io.version}</version>
+            <groupId>cn.dev33</groupId>
+            <artifactId>sa-token-spring-boot-starter</artifactId>
+            <version>${sa-token.version}</version>
         </dependency>
+
+        <!-- Sa-Token 整合 Redis （使用jackson序列化方式） -->
+        <dependency>
+            <groupId>cn.dev33</groupId>
+            <artifactId>sa-token-dao-redis-jackson</artifactId>
+            <version>${sa-token.version}</version>
+        </dependency>
+
+        <!-- JWT -->
+        <dependency>
+            <groupId>cn.dev33</groupId>
+            <artifactId>sa-token-jwt</artifactId>
+            <version>${sa-token.version}</version>
+        </dependency>
+
 
     </dependencies>
 

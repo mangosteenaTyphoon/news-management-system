@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/news-common/news-common-banner/news-common-banner.iml" filepath="$PROJECT_DIR$/news-common/news-common-banner/news-common-banner.iml" />
+      <module fileurl="file://$PROJECT_DIR$/news-common/news-common-core/news-common-core.iml" filepath="$PROJECT_DIR$/news-common/news-common-core/news-common-core.iml" />
+    </modules>
+  </component>
+</project>

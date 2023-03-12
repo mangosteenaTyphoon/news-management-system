@@ -1,8 +1,8 @@
 package com.qy.news.controller;
 
 
-import com.news.core.result.R;
 import com.qy.news.entity.SysUser;
+import com.qy.news.result.R;
 import com.qy.news.service.SysUserService;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
@@ -21,7 +21,7 @@ import org.springframework.web.bind.annotation.*;
 
 @Api(tags = "用户管理")
 @RestController
-@RequestMapping("/news/sys-user")
+@RequestMapping("/user")
 public class SysUserController {
 
     @Autowired

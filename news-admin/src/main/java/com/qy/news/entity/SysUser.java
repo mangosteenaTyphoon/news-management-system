@@ -1,9 +1,10 @@
 package com.qy.news.entity;
 
-import com.baomidou.mybatisplus.annotation.IdType;
+import com.baomidou.mybatisplus.annotation.*;
+
 import java.util.Date;
-import com.baomidou.mybatisplus.annotation.TableId;
 import java.io.Serializable;
+
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
@@ -48,12 +49,15 @@ public class SysUser implements Serializable {
     @ApiModelProperty(value = "性别 1为男 0为女")
     private Boolean sex;
 
+    @TableLogic
     @ApiModelProperty(value = "状态 0为正常 1为封号")
     private Boolean status;
 
+    @TableField(fill = FieldFill.INSERT)
     @ApiModelProperty(value = "创建时间")
     private Date gmtCreate;
 
+    @TableField(fill = FieldFill.INSERT_UPDATE)
     @ApiModelProperty(value = "修改时间")
     private Date gmtModified;
 

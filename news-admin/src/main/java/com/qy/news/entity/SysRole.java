@@ -24,6 +24,8 @@ import lombok.experimental.Accessors;
 @ApiModel(value="SysRole对象", description="")
 public class SysRole implements Serializable {
 
+
+
     private static final long serialVersionUID = 1L;
 
     @ApiModelProperty(value = " id")

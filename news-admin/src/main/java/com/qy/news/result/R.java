@@ -1,4 +1,4 @@
-package com.news.core.result;
+package com.qy.news.result;
 
 import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
@@ -25,11 +25,12 @@ public class R {
     //把构造方法私有
     private R() {}
 
+
     //成功静态方法
     public static R ok() {
         R r = new R();
         r.setSuccess(true);
-        r.setCode(ResultCode.SUCCESS);
+        r.setCode(ResultCode.SUCCESS.getCode());
         r.setMessage("成功");
         return r;
     }
@@ -38,10 +39,11 @@ public class R {
     public static R error() {
         R r = new R();
         r.setSuccess(false);
-        r.setCode(ResultCode.ERROR);
+        r.setCode(ResultCode.ERROR.getCode());
         r.setMessage("失败");
         return r;
     }
+
 
     public R success(Boolean success){
         this.setSuccess(success);

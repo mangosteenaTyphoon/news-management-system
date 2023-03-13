@@ -18,10 +18,25 @@
     </sql>
     <select id="selectUserAuthInfo" resultMap="userAuth">
          SELECT <include refid="Column_list"/>
-         FROM sys_user  where user_name= #{account}
+         FROM sys_user
+        <where>
+            <if test="type!=null and type == 1">
+                user_name = #{account}
+            </if>
+            <if test="type!=null and type == 2">
+                email = #{account}
+            </if>
+            <if test="type!=null and type == 3">
+                phone = #{account}
+            </if>
+        </where>
     </select>
-
-    
+    <select id="selectUserIdByRole" resultType="java.lang.String">
+        SELECT role_key
+        FROM sys_role AS A
+        LEFT JOIN sys_user_role AS B ON ( A.id = B.role_id )
+        WHERE B.user_id = #{userId}
+    </select>
 
 
 </mapper>

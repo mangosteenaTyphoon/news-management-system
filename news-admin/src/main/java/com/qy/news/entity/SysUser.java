@@ -47,11 +47,11 @@ public class SysUser implements Serializable {
     private String nickName;
 
     @ApiModelProperty(value = "性别 1为男 0为女")
-    private Boolean sex;
+    private Integer sex;
 
-    @TableLogic
+
     @ApiModelProperty(value = "状态 0为正常 1为封号")
-    private Boolean status;
+    private Integer status;
 
     @TableField(fill = FieldFill.INSERT)
     @ApiModelProperty(value = "创建时间")

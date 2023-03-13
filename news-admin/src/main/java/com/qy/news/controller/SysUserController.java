@@ -6,6 +6,7 @@ import com.qy.news.result.R;
 import com.qy.news.service.SysUserService;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
+import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
@@ -19,22 +20,15 @@ import org.springframework.web.bind.annotation.*;
  * @since 2023-03-10
  */
 
-@Api(tags = "用户管理")
+@Slf4j
+@Api(tags = {"用户管理"}, description = "用户进行增删改查")
 @RestController
 @RequestMapping("/user")
 public class SysUserController {
 
     @Autowired
-    private SysUserService sysUserService;
+    private SysUserService userService;
 
-//    @ApiOperation("添加用户")
-//    @PostMapping("addUser")
-//    public R saveOrupdateUser(@RequestBody SysUser sysUser){
-//            if(StringUtils.isEmpty(sysUser.toString())){
-//                return R.error().message("未输入有效信息");
-//            }
-//            return R.ok().success();
-//    }
 
     /**
      * @Author 山竹
@@ -46,7 +40,9 @@ public class SysUserController {
     @ApiOperation("获取全部用户")
     @GetMapping("getAllUser")
     public R getAllUser(){
-        return R.ok().data("items", sysUserService.list(null));
+
+
+        return R.ok().data("items", userService.list(null));
     }
 
 }

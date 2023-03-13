@@ -5,6 +5,8 @@ import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 import org.apache.ibatis.annotations.Param;
 import org.springframework.stereotype.Repository;
 
+import java.util.List;
+
 /**
  * <p>
  *  Mapper 接口
@@ -16,7 +18,8 @@ import org.springframework.stereotype.Repository;
 @Repository
 public interface SysUserMapper extends BaseMapper<SysUser> {
 
-    SysUser selectUserAuthInfo(@Param("account") String account);
+    SysUser selectUserAuthInfo(@Param("account") String account,@Param("type") Integer type);
 
 
+    List<String> selectUserIdByRole(@Param("userId") String id);
 }

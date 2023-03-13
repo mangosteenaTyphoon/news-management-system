@@ -3,7 +3,9 @@ package com.qy.news.service;
 import com.qy.news.entity.SysUser;
 import com.baomidou.mybatisplus.extension.service.IService;
 import com.qy.news.entity.dto.UserAuthInfoReqDTO;
+import com.qy.news.entity.dto.UserIdReqDTO;
 
+import java.util.List;
 import java.util.Map;
 
 /**
@@ -26,4 +28,13 @@ public interface SysUserService extends IService<SysUser> {
     Map<String, Object> loginHandle(UserAuthInfoReqDTO reqDTO);
 
 
+    List<String> queryUserIdByRole(UserIdReqDTO reqDTO);
+
+    /**
+     * 注册处理逻辑
+     *
+     * @param reqDTO
+     * @return
+     */
+    int saveUser(SysUser reqDTO);
 }

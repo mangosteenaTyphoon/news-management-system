@@ -10,6 +10,8 @@ package com.qy.news.constant;
 public class AuthConst {
     public static final String FLAG = "flag";
 
+    public static final String DEFAULT_FLAG = "-";
+
     public static final String FLAG_ZERO_VAL = "0";
 
     public static final String FLAG_ONE_VAL = "1";

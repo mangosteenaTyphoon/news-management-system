@@ -6,9 +6,7 @@ spring:
     name: news-admin
 
 
-  mvc:
-    pathmatch:
-      matching-strategy: ant_path_matcher
+
 
 
   profiles:
@@ -24,11 +22,28 @@ spring:
     date-format: yyyy-MM-dd HH:mm:ss
     time-zone: GMT+8
 
+  ## Redis
+  redis:
+    host: 81.68.201.126
+    port: 6379
+    password: password123
+    lettuce:
+      pool:
+        max-active: 1500
+        max-wait: 5000
+        max-idle: 500
+        min-idle: 100
+        shutdown-timeout: 1000
+
+
 #mybatis日志处理
 mybatis-plus:
   configuration:
     log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
-  mapper-locations: classpath:com/qy/news/mapper/xml/*/xml
+  mapper-locations: classpath:com/qy/news/mapper/xml/*.xml
+
+
+
 
 
 # Sa-Token配置

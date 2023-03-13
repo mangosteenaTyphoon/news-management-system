@@ -43,9 +43,9 @@ public class SwaggerConfig {
     private ApiInfo apiInfo(){
         return new ApiInfoBuilder()
                 //1.接口文档标题
-                .title("SpringBoot整合Swagger")
+                .title("新闻管理系统接口文档")
                 //2.接口文档描述内容
-                .description("这里是SpringBoot整合Swagger的详细信息")
+                .description("这里是新闻管理系统接口文档的具体接口描述")
                 //3.项目文档迭代版本
                 .version("9.0")
                 //4.主要联系人信息（姓名name，个人主页url，邮箱email）

@@ -8,6 +8,7 @@ import com.qy.news.constant.AuthConst;
 import com.qy.news.entity.SysUser;
 import com.qy.news.entity.dto.UserAuthInfoReqDTO;
 import com.qy.news.entity.dto.UserIdReqDTO;
+import com.qy.news.entity.dto.UserStatusDTO;
 import com.qy.news.result.R;
 import com.qy.news.result.ResultCode;
 import com.qy.news.service.SysUserService;
@@ -132,6 +133,10 @@ public class AuthController {
     public R getUserRole(@RequestBody UserIdReqDTO reqDTO) {
         return R.ok().data("userUserVo", userService.queryUserIdByRole(reqDTO));
     }
+
+
+
+
 
 
 

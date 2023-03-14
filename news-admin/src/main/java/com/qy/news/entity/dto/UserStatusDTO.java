@@ -9,4 +9,6 @@ public class UserStatusDTO {
     private String id;
 
     private Integer status;
+
+    private String userName;
 }

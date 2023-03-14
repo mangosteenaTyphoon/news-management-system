@@ -5,13 +5,12 @@ import cn.dev33.satoken.annotation.SaCheckLogin;
 import cn.dev33.satoken.stp.StpUtil;
 import cn.hutool.core.util.StrUtil;
 import com.qy.news.constant.AuthConst;
-import com.qy.news.entity.SysUser;
+import com.qy.news.entity.User;
 import com.qy.news.entity.dto.UserAuthInfoReqDTO;
 import com.qy.news.entity.dto.UserIdReqDTO;
-import com.qy.news.entity.dto.UserStatusDTO;
 import com.qy.news.result.R;
 import com.qy.news.result.ResultCode;
-import com.qy.news.service.SysUserService;
+import com.qy.news.service.UserService;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import lombok.extern.slf4j.Slf4j;
@@ -27,7 +26,7 @@ import java.util.Map;
 public class AuthController {
 
     @Autowired
-    private SysUserService userService;
+    private UserService userService;
 
 
     /*
@@ -69,7 +68,7 @@ public class AuthController {
      **/
     @PostMapping("save")
     @ApiOperation("用户注册")
-    public R SaveOrUpdateUser(@RequestBody SysUser reqDTO){
+    public R SaveOrUpdateUser(@RequestBody User reqDTO){
         switch (userService.saveUser(reqDTO)){
             case -1 : return R.error().message("注册异常");
             case  0 : return R.error().message("注册信息未填全");

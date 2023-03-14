@@ -6,7 +6,7 @@ import cn.dev33.satoken.router.SaRouter;
 import cn.dev33.satoken.stp.StpInterface;
 import cn.dev33.satoken.stp.StpUtil;
 import com.qy.news.entity.dto.UserIdReqDTO;
-import com.qy.news.service.SysUserService;
+import com.qy.news.service.UserService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Configuration;
@@ -27,7 +27,7 @@ import java.util.List;
 public class SaTokenConfigure implements WebMvcConfigurer, StpInterface {
 
     @Autowired
-    private SysUserService userService;
+    private UserService userService;
 
     /**
      * 注册拦截器
